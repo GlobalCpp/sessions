@@ -1,4 +1,4 @@
-name: chi-cpp-clang
+name: global-cpp-clang
 channels:
   - conda-forge
 dependencies:

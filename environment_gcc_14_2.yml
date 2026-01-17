@@ -1,4 +1,4 @@
-name: chi-cpp-14-2
+name: global-cpp-14-2
 channels:
   - conda-forge
 dependencies:
