@@ -1,0 +1,8 @@
+name: chi-cpp-clang
+channels:
+  - conda-forge
+dependencies:
+  - clangxx
+  - libcxx
+  - libcxx-devel
+  - boost

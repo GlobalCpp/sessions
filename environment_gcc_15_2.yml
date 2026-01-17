@@ -1,0 +1,10 @@
+name: chi-cpp-15-2
+channels:
+  - conda-forge
+dependencies:
+  - gcc==15.2.0
+  - gxx==15.2.0
+  - gcc_linux-64==15.2.0
+  - gxx_linux-64==15.2.0
+  - boost
+
