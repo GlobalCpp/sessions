@@ -8,3 +8,10 @@ Not all presenters may choose to utilize this process. Please take note
 at the start of the session where they will be operating from that week.
 
 
+```
+micromamba env create -f environment_gcc_15_2.yml
+micromamba env create -f environment_gcc_14_2.yml
+micromamba env create -f environment_clang.yml
+micromamba activate global-cpp-15-2
+micromamba activate global-cpp-clang
+```
