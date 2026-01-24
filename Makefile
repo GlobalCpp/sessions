@@ -1,3 +1,6 @@
+install-micromamba:
+	"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+
 setup-env:
 	micromamba env create -f environment_gcc_15_2.yml
 
