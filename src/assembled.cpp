@@ -65,15 +65,15 @@ namespace myApp
 	{
 		using namespace cfg;
 		return {
-			KVP {"int", c.i}, // Created using CTAD
-			KVP {"double", c.d} // Created using CTAD
+			KVP {"my_name", c.i}, // Created using CTAD
+			KVP {"my_age_in_gigaseconds", c.d} // Created using CTAD
 		};
 	}
 	cfg::Params config(Config2& c) 
 	{
 		using namespace cfg;
 		return {
-			KVP {"str", c.s} // Created using CTAD
+			KVP {"pet_name", c.s} // Created using CTAD
 		};
 	}
 } // namespace myApp
