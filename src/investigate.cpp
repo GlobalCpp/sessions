@@ -22,7 +22,21 @@ int main() {
     for ( auto& x : v )
       x = x*x;
 
-  std::println( "{}",v );
+#define N 50'000
+#define INDEX( i,j ) (i)*N + (j)
+    std::vector<double> square(static_cast<long>(N)*N);
+    double tstart = omp_get_wtime();
+#pragma omp parallel for
+    for ( int i=1; i<N-1; i++ ) {
+      for ( int j=1; j<N-1; j++ ) {
+	square[ INDEX(i,j) ] = 
+	  ( square[ INDEX(i-1,j-1) ] + square[ INDEX(i+1,j+1) ] )/2;
+      }
+    }
+    double duration = omp_get_wtime()-tstart;
+    std::println( "time: {}",duration );
+
+    //  std::println( "{}",v );
 
   return 0;
 }
