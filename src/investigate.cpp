@@ -18,9 +18,12 @@ int main() {
   }
   
   std::vector<double> v(10,2);
-#pragma omp parallel for 
-    for ( auto& x : v )
-      x = x*x;
+  double s{0.};
+#pragma omp parallel for reduction(+:s)
+  for ( auto& x : v ) {
+    x = x*x;
+    s += x;
+  }
 
 #define N 50'000
 #define INDEX( i,j ) (i)*N + (j)
@@ -29,7 +32,7 @@ int main() {
 #pragma omp parallel for
     for ( int i=1; i<N-1; i++ ) {
       for ( int j=1; j<N-1; j++ ) {
-	square[ INDEX(i,j) ] = 
+	square[ INDEX(i,j) ] =
 	  ( square[ INDEX(i-1,j-1) ] + square[ INDEX(i+1,j+1) ] )/2;
       }
     }
