@@ -19,7 +19,7 @@ int main() {
   
   std::vector<double> v(10,2);
   double s{0.};
-#pragma omp parallel for reduction(+:s)
+#pragma omp parallel for reduction(+:s) 
   for ( auto& x : v ) {
     x = x*x;
     s += x;
