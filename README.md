@@ -21,6 +21,12 @@ To get the branch in one line, use
 git clone --single-branch --branch session_2026_03_21 git@github.com:GlobalCpp/sessions.git
 ```
 
+environment setup
+```
+micromamba env create -f environment_gcc_15_2.yml
+micromamba activate global-cpp-15-2
+```
+
 to build the programs, see `src/Makefile`
 
 to run the programs, use
