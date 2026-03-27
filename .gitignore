@@ -1,1 +1,4 @@
 a.out
+# pixi environments
+.pixi/*
+!.pixi/config.toml
